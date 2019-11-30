@@ -1,0 +1,17 @@
+Functional Specification.
+•	Background:
+
+ Aviation accidents is one of the rarest transportation accidents, the fatal rate of an aviation accident is among the highest.  The causes of aviation accidents are extremely complicated and unpredictable. Therefore, due to the nature of aviation transportation, safety is always an important research area in transportation safety. In the past 2 years, Boeing 737 MAX has suffered 2 hull loss accidents, including Lion Air Flight 610 crash in 2018, and Ethiopian Airlines Flight 302 crash in 2019. We hope this project can give people some intuitive feelings about aviation accidents in the U.S. and arouse our awareness of aviation safety as well.
+
+•	User profile:
+ 
+  All aviation safety investigators, students, researchers and any person who has interests in aviation safety records and related fields. Our visualization tool is designed for public use. However, due to the nature of our visualization tool, basic knowledge of python coding is required. Experience and knowledge of basic statistics and “dataframe” specified by pandas are pluses.
+  
+•	Data sources: Our data used is aircraft accident records maintained and published by the National Transportation Safety Board, also known as NTSB. This data set is a collection of global aircraft accidents combined with several basic properties, such as location, aircraft type, make and model, etc. The dataset can be found in the link below:
+ 
+https://catalog.data.gov/dataset/aviation-data-and-documentation-from-the-ntsb-accident-database-system
+ 
+•	Use cases. 
+o	Case one: Data selection by key properties. We expect user to input querying conditions for extraction of subset data. We use pandas to transfer source data into a “dataframe” to perform querying. For example, users could fetch air crash records by number of deaths, in certain time frame or by location.  This task can be done by sorting and slicing data ser per required.
+o	Case two: Custom data visualization as user desired. By utilizing different visualization libraries, data can be visualized in multiple ways to fit user request. For example, aircraft accidents could be highly related to locations in the perspective of terrain and local weather (hills and microbursts). This case could be represented easily by map visualization using folium. Furthermore, by adding more layer on top of the maps, may potential side effects could be revealed.
+
