@@ -1,4 +1,4 @@
-# CSE583_Project
+# Aviation Accident Data Visualizer
 ## Background
 Aviation safety is always an important
 research area in transportation safety.
