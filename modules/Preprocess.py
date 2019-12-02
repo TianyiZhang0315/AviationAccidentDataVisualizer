@@ -25,3 +25,5 @@ def xml_2csv(input_path, file_name):
 def drop_nan(df):
 
     return df.dropna(subset = ['Longitude','Latitude'])
+def elim_country(df):
+    return df[df['Country']=='United States']
