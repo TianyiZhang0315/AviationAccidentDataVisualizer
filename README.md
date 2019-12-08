@@ -22,7 +22,7 @@ AviationAccidentDataVisualizer/
   |- README.md
   |- setup.py
   |- Requirements.txt
-  
+```
   
   
   Installation
