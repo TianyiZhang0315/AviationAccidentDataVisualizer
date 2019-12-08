@@ -8,7 +8,7 @@ except ImportError:
 import pandas as pd
 import os
 
-PATH = 'AviationAccidentDataVisualizer\modules'
+PATH = os.path.dirname(os.path.abspath(__file__))
 FILENAME = 'AviationData.xml'
 
 
@@ -60,16 +60,17 @@ def create_state(df):
     return df
 
 
-def dataset(path):
+def dataset():
     """This function is the main function of this module. Users should import this module and call this
     function to obtain the clean dataframe of AviationData.xml for querying and visualization.
     :param path:
     :return: dataframe
     """
-    global FILENAME
-    if not os.path.isfile(path+'\\'+'AviationData.csv'):
-        xml_2csv(path, FILENAME)
-    df = pd.read_csv(path+'\\'+'AviationData.csv')
+    global FILENAME,PATH
+
+    if not os.path.isfile(PATH+'\\'+'AviationData.csv'):
+        xml_2csv(PATH, FILENAME)
+    df = pd.read_csv(PATH+'\\'+'AviationData.csv')
     df = drop_nan(df)
     df = elim_country(df)
     df = create_state(df)

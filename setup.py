@@ -1,9 +1,9 @@
-from setuptools import setup
-
-setup(
+from setuptools import setup, find_packages
+PACKAGES = find_packages()
+opts = dict(
     name='AviationAccidentDataVisualizer',
     version='1.0',
-    packages=['AviationAccidentDataVisualizer'],
+    packages=PACKAGES,
     url='https://github.com/TianyiZhang0315/AviationAccidentDataVisualizer',
     license='LICENSE.txt',
     author='Yetao Chen, Yifan Xu, Tianyi Zhang',
@@ -15,3 +15,5 @@ setup(
 
 
 )
+if __name__ == '__main__':
+    setup(**opts)
