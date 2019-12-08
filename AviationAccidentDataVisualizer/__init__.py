@@ -1,3 +1,3 @@
 #packages
-import AviationAccidentDataVisualizer.modules.Preprocess as pre
-import AviationAccidentDataVisualizer.modules.DataManagement as dm
+import numpy as np
+import pandas as pd
