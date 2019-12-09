@@ -35,13 +35,13 @@ def xml_2csv(input_path, file_name):
     df.to_csv(input_path+'\\'+'AviationData.csv', index=None, header=True)
     return
 
-
-def drop_nan(df):
-    """This function drop all entries that contains NaN values.
-    :param df:
-    :return:dataframe
-    """
-    return df.dropna(subset = ['Longitude','Latitude'])
+"""Now do drop nan in visualizer"""
+# def drop_nan(df):
+#     """This function drop all entries that contains NaN values.
+#     :param df:
+#     :return:dataframe
+#     """
+#     return df.dropna(subset = ['Longitude','Latitude'])
 
 
 def elim_country(df):
@@ -71,7 +71,7 @@ def dataset():
     if not os.path.isfile(PATH+'\\'+'AviationData.csv'):
         xml_2csv(PATH, FILENAME)
     df = pd.read_csv(PATH+'\\'+'AviationData.csv')
-    df = drop_nan(df)
+    # df = drop_nan(df)
     df = elim_country(df)
     df = create_state(df)
     return df
