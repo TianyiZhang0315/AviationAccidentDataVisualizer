@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7f0c9d6-4f47-4476-9d2d-0725fd781592" name="Default Changelist" comment="" />
+    <list default="true" id="a7f0c9d6-4f47-4476-9d2d-0725fd781592" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/test_Preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/test_Preprocess.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +47,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_DataManagement">
+  <component name="RunManager" selected="Python tests.Nosetests in test_Preprocess.py">
     <configuration name="Preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AviationAccidentDataVisualizer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -87,8 +90,24 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Nosetests in test_Preprocess.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <module name="AviationAccidentDataVisualizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/modules" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/modules/test_Preprocess.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Nosetests in test_Preprocess.py" />
         <item itemvalue="Python.test_DataManagement" />
         <item itemvalue="Python.Preprocess" />
       </list>

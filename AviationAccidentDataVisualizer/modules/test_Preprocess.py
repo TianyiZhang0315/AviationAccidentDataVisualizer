@@ -2,7 +2,7 @@
 This file is a test file for Preprocess module.
 
 """
-import AviationAccidentDataVisualizer.modules.Preprocess as pre
+import modules.Preprocess as pre
 import os
 PATH = os.path.dirname(os.path.abspath(__file__))
 if __name__ == '__main__':
