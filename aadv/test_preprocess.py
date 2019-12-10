@@ -2,7 +2,7 @@
 This file is a test file for Preprocess module.
 
 """
-import modules.preprocess as pre
+import aadv.modules.preprocess as pre
 import os
 
 PATH = os.path.dirname(os.path.abspath(__file__))

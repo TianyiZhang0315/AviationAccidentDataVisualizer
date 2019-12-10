@@ -1,7 +1,7 @@
 """test_DataManagement.py
 This file is a test file for DataManagement module.
 """
-import modules.data_management as dm
+import aadv.modules.data_management as dm
 import pandas as pd
 import numpy as np
 if __name__ == '__main__':

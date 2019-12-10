@@ -13,63 +13,63 @@ from folium.plugins import HeatMap
 import os
 
 STATES = {
-        ' AK': 'Alaska',
-        ' AL': 'Alabama',
-        ' AR': 'Arkansas',
-        ' AS': 'American Samoa',
-        ' AZ': 'Arizona',
-        ' CA': 'California',
-        ' CO': 'Colorado',
-        ' CT': 'Connecticut',
-        ' DC': 'District of Columbia',
-        ' DE': 'Delaware',
-        ' FL': 'Florida',
-        ' GA': 'Georgia',
-        ' GU': 'Guam',
-        ' HI': 'Hawaii',
-        ' IA': 'Iowa',
-        ' ID': 'Idaho',
-        ' IL': 'Illinois',
-        ' IN': 'Indiana',
-        ' KS': 'Kansas',
-        ' KY': 'Kentucky',
-        ' LA': 'Louisiana',
-        ' MA': 'Massachusetts',
-        ' MD': 'Maryland',
-        ' ME': 'Maine',
-        ' MI': 'Michigan',
-        ' MN': 'Minnesota',
-        ' MO': 'Missouri',
-        ' MP': 'Northern Mariana Islands',
-        ' MS': 'Mississippi',
-        ' MT': 'Montana',
-        ' NA': 'National',
-        ' NC': 'North Carolina',
-        ' ND': 'North Dakota',
-        ' NE': 'Nebraska',
-        ' NH': 'New Hampshire',
-        ' NJ': 'New Jersey',
-        ' NM': 'New Mexico',
-        ' NV': 'Nevada',
-        ' NY': 'New York',
-        ' OH': 'Ohio',
-        ' OK': 'Oklahoma',
-        ' OR': 'Oregon',
-        ' PA': 'Pennsylvania',
-        ' PR': 'Puerto Rico',
-        ' RI': 'Rhode Island',
-        ' SC': 'South Carolina',
-        ' SD': 'South Dakota',
-        ' TN': 'Tennessee',
-        ' TX': 'Texas',
-        ' UT': 'Utah',
-        ' VA': 'Virginia',
-        ' VI': 'Virgin Islands',
-        ' VT': 'Vermont',
-        ' WA': 'Washington',
-        ' WI': 'Wisconsin',
-        ' WV': 'West Virginia',
-        ' WY': 'Wyoming'
+        'AK': 'Alaska',
+        'AL': 'Alabama',
+        'AR': 'Arkansas',
+        'AS': 'American Samoa',
+        'AZ': 'Arizona',
+        'CA': 'California',
+        'CO': 'Colorado',
+        'CT': 'Connecticut',
+        'DC': 'District of Columbia',
+        'DE': 'Delaware',
+        'FL': 'Florida',
+        'GA': 'Georgia',
+        'GU': 'Guam',
+        'HI': 'Hawaii',
+        'IA': 'Iowa',
+        'ID': 'Idaho',
+        'IL': 'Illinois',
+        'IN': 'Indiana',
+        'KS': 'Kansas',
+        'KY': 'Kentucky',
+        'LA': 'Louisiana',
+        'MA': 'Massachusetts',
+        'MD': 'Maryland',
+        'ME': 'Maine',
+        'MI': 'Michigan',
+        'MN': 'Minnesota',
+        'MO': 'Missouri',
+        'MP': 'Northern Mariana Islands',
+        'MS': 'Mississippi',
+        'MT': 'Montana',
+        'NA': 'National',
+        'NC': 'North Carolina',
+        'ND': 'North Dakota',
+        'NE': 'Nebraska',
+        'NH': 'New Hampshire',
+        'NJ': 'New Jersey',
+        'NM': 'New Mexico',
+        'NV': 'Nevada',
+        'NY': 'New York',
+        'OH': 'Ohio',
+        'OK': 'Oklahoma',
+        'OR': 'Oregon',
+        'PA': 'Pennsylvania',
+        'PR': 'Puerto Rico',
+        'RI': 'Rhode Island',
+        'SC': 'South Carolina',
+        'SD': 'South Dakota',
+        'TN': 'Tennessee',
+        'TX': 'Texas',
+        'UT': 'Utah',
+        'VA': 'Virginia',
+        'VI': 'Virgin Islands',
+        'VT': 'Vermont',
+        'WA': 'Washington',
+        'WI': 'Wisconsin',
+        'WV': 'West Virginia',
+        'WY': 'Wyoming'
 }
 
 
@@ -194,9 +194,9 @@ def map_by_states(df):
             df2["State"][i] = STATES[df2["State"][i]]
         else:
             df2 = df2.drop([i])
-    print(os.path.dirname(os.path.abspath(__file__)))
-    #state_geo = os.path.dirname(os.path.abspath(__file__))+'/data/usstates.json'
-    state_geo = os.getcwd()+'data/usstates.json'
+    #print(os.path.dirname(os.path.abspath(__file__)))
+    state_geo = os.path.dirname(os.path.abspath(__file__))+'/data/usstates.json'
+    #state_geo = os.getcwd()+'data/usstates.json'
     #state_geo = os.path.join('data/usstates.json')
     m = folium.Map(location=[52, -100], zoom_start=2)
     for ele in col_for_df:
@@ -296,9 +296,13 @@ def bar_plot(df):
     user_xlabel = user_query_input("Enter One X-axis Element: ['AirportCode', 'AircraftCategory', 'Model', "
                                    "'Make','BroadPhaseOfFlight']",
                 ['AirportCode', 'AircraftCategory', 'Model', 'Make', 'BroadPhaseOfFlight'])
-    user_ylabel = user_query_input_multiple("Enter Multi Y-axis Element: ", ["TotalFatalInjuries",
-                                            "TotalSeriousInjuries", "TotalMinorInjuries", "TotalUninjured",
-                                                                             "TotalAccidentNumber"])
+    user_ylabel = user_query_input_multiple("Enter One Y-axis Element: [TotalFatalInjuries, TotalSeriousInjuries,"
+                                                                           "TotalMinorInjuries, TotalUninjured,"
+                                                                           "TotalAccidentNumber]",
+                                                                           ["TotalFatalInjuries",
+                                                                            "TotalSeriousInjuries",
+                                                                           "TotalMinorInjuries", "TotalUninjured",
+                                                                           "TotalAccidentNumber"])
         
     if "TotalAccidentNumber" in user_ylabel:
         user_ylabel2 = [ele for ele in user_ylabel if ele != "TotalAccidentNumber"]
