@@ -4,24 +4,27 @@ Organization of the Project
 ---------------------------
 ```
 AviationAccidentDataVisualizer/
-  |- AviationAccidentDataVisualizer/
-     |- Modules/
+  |- aadv/
+     |- modules/
+        |- data/
+           |- AviationData.xml
         |- __init__.py
-        |- Preprocess.py
-        |- DataManagement.py
-        |- test_DataManagement.py
-        |- test_Preprocess.py
-        |- AviationData.xml
+        |- preprocess.py
+        |- data_management.py
+        |- test_data_management.py
+        |- test_preprocess.py 
      |- __init__.py
-  |- Examples/
-     |- Examples.py
+  |- examples/
+     |- examples.ipynb
   |- docs/
      |-Component Specification.txt
      |-Functional Specification.txt
   |- LICENSE
   |- README.md
   |- setup.py
-  |- Requirements.txt
+  |- requirements.txt
+  |- .travis.yml
+  |- .gitignore
 ```
   
   
@@ -43,7 +46,7 @@ python setup.py install
 To ensure that the dependencies to run `AviationAccidentDataVisualizer` are installed on your computer you will want to run the following command:
 
 ```
-pip install -r Requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Background
