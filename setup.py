@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 PACKAGES = find_packages()
 opts = dict(
-    name='AviationAccidentDataVisualizer',
+    name='aadv',
     version='1.0',
     packages=PACKAGES,
     url='https://github.com/TianyiZhang0315/AviationAccidentDataVisualizer',
