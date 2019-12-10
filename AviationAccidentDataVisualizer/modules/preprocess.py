@@ -19,23 +19,26 @@ def xml_2csv(input_path, file_name):
     :param file_name:
     :return: None
     """
-    tree = ET.ElementTree(file=input_path+'\\'+file_name)
+    tree = ET.ElementTree(file=input_path + '\\' + file_name)
     root = tree.getroot()
-    #print(root.tag, root.attrib)
+    # print(root.tag, root.attrib)
     lst = []
     i = 0
     for elem in tree.iter():
-        #if i == 2:
-            #print(elem.attrib)
+        # if i == 2:
+        # print(elem.attrib)
         lst.append(elem.attrib)
         i += 1
     lst = lst[2:]
-    #keys = list(lst[0].keys())
+    # keys = list(lst[0].keys())
     df = pd.DataFrame.from_dict(lst)
-    df.to_csv(input_path+'\\'+'AviationData.csv', index=None, header=True)
+    df.to_csv(input_path + '\\' + 'AviationData.csv', index=None, header=True)
     return
 
+
 """Now do drop nan in visualizer"""
+
+
 # def drop_nan(df):
 #     """This function drop all entries that contains NaN values.
 #     :param df:
@@ -49,7 +52,8 @@ def elim_country(df):
     :param df:
     :return:dataframe
     """
-    return df[df['Country']=='United States']
+    return df[df['Country'] == 'United States']
+
 
 def create_state(df):
     """This function creates a new column 'State' for the dataframe.
@@ -66,11 +70,11 @@ def dataset():
     :param path:
     :return: dataframe
     """
-    global FILENAME,PATH
+    global FILENAME, PATH
 
-    if not os.path.isfile(PATH+'\\'+'AviationData.csv'):
+    if not os.path.isfile(PATH + '\\' + 'AviationData.csv'):
         xml_2csv(PATH, FILENAME)
-    df = pd.read_csv(PATH+'\\'+'AviationData.csv')
+    df = pd.read_csv(PATH + '\\' + 'AviationData.csv')
     # df = drop_nan(df)
     df = elim_country(df)
     df = create_state(df)
@@ -80,7 +84,3 @@ def dataset():
 if __name__ == '__main__':
     df = dataset()
     print(df.info)
-    
-
-    
-    

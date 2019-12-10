@@ -1,14 +1,14 @@
 """test_DataManagement.py
 This file is a test file for DataManagement module.
 """
-import DataManagement as dm
+import modules.data_management as dm
 import pandas as pd
 import numpy as np
 if __name__ == '__main__':
 
     # Edge test for column_query() to trigger no column exception in function
     print('Edge test 1 for column_query()')
-    df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns = ['a', 'b', 'c'])
+    df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=['a', 'b', 'c'])
     condition_1 = 'State==AK'
     condition_2 = 'Latitude<=20'
     try:
